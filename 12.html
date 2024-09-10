@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中秋灯谜游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Microsoft YaHei', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .container h1 {
+            font-size: 3rem;
+            color: #ffdd59;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .container p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .start-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #ff9f43;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .start-btn:hover {
+            background-color: #ffa502;
+            transform: translateY(-5px);
+        }
+        .moon {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle at 100px 100px, #fff9c4, #fbc02d);
+            border-radius: 50%;
+            position: absolute;
+            top: 5%;
+            right: 10%;
+            box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+            animation: float 5s ease-in-out infinite;
+        }
+        .lantern {
+            width: 80px;
+            height: 130px;
+            background-color: #ff6f61;
+            position: absolute;
+            bottom: 10%;
+            left: 15%;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            animation: sway 3s ease-in-out infinite;
+        }
+        .lantern:before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background-color: #fff;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .lantern:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes sway {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>中秋灯谜游戏</h1>
+        <p>参与答题，收集五仁月饼的内馅，赢取中秋好礼！</p>
+        <a href="https://www.wjx.cn/jq/your-questionnaire-id.aspx" class="start-btn">开始游戏</a>
+    </div>
+
+    <div class="moon"></div>
+    <div class="lantern"></div>
+
+</body>
+</html>
